@@ -8,8 +8,8 @@ try {
     $carnumber= $_SESSION['carnumber'];
     $seat= $_POST['seat'];
 
-    $pdo= new PDO('mysql:host=localhost;dbname=dat_cho', 'root','');
-    $sql = "INSERT INTO car_booking(`name`,phone_number,seat,check_in,car_number) VALUE ('$name',$phone,'$seat','$checkin','$carnumber')";
+    $pdo= new PDO('mysql:host=localhost;dbname=datamysql', 'root','');
+    $sql = "INSERT INTO datcho(`name`,phone_number,seat,check_in,car_number) VALUE ('$name',$phone,'$seat','$checkin','$carnumber')";
     $pdo->exec($sql);
 
     unset($_SESSION['name']);
